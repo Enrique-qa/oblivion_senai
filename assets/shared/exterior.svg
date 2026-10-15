@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">A casa depois do último poste</title>
+  <desc id="desc">Casa abandonada sob um céu noturno, com árvores secas, portão de ferro e uma janela iluminada.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#071116"/><stop offset=".6" stop-color="#1b2d30"/><stop offset="1" stop-color="#37413b"/></linearGradient>
+    <linearGradient id="stone" x2=".7" y2="1"><stop stop-color="#3a4140"/><stop offset="1" stop-color="#141c1e"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#172021"/><stop offset="1" stop-color="#050b0e"/></linearGradient>
+    <radialGradient id="moon"><stop stop-color="#c3d1b6" stop-opacity=".28"/><stop offset="1" stop-color="#a2b9b4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="light"><stop stop-color="#d5a664" stop-opacity=".35"/><stop offset="1" stop-color="#d5a664" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vignette"><stop offset=".3" stop-color="#030709" stop-opacity="0"/><stop offset="1" stop-color="#030709" stop-opacity=".85"/></radialGradient>
+    <pattern id="bricks" width="100" height="50" patternUnits="userSpaceOnUse"><path d="M0 0H100M0 50H100M50 0V25M0 25H100M20 25V50" fill="none" stroke="#89928b" stroke-opacity=".08" stroke-width="2"/></pattern>
+    <filter id="mist"><feGaussianBlur stdDeviation="25"/></filter>
+    <filter id="grain"><feTurbulence baseFrequency=".72" numOctaves="3" seed="21" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <g id="window"><rect width="100" height="140" fill="#070e11" stroke="#66706a" stroke-width="7"/><path d="M50 0V140M0 58H100" stroke="#404b47" stroke-width="5"/><path d="M-8-8H108M-9 149H109" stroke="#53605b" stroke-width="8"/></g>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <ellipse cx="1220" cy="170" rx="410" ry="300" fill="url(#moon)"/>
+  <circle cx="1220" cy="145" r="46" fill="#a3b7a9" opacity=".48"/>
+  <path d="M0 270Q250 165 470 235T920 210T1600 180V325Q1100 300 800 315T0 330Z" fill="#1b2b2e" opacity=".7" filter="url(#mist)"/>
+  <g fill="#101a1e"><path d="M0 500L65 230L100 455L140 150L196 470L248 230L285 500Z"/><path d="M1150 490L1200 270L1240 460L1300 200L1350 420L1400 180L1450 480L1540 160L1600 450V680H1150Z"/></g>
+  <path d="M0 665Q230 600 480 648T1000 632T1600 650V900H0Z" fill="url(#ground)"/>
+  <g>
+    <path d="M440 348L810 142L1190 342Z" fill="#090f12" stroke="#53605b" stroke-width="6"/>
+    <path d="M468 347H1162V667H468Z" fill="url(#stone)"/>
+    <path d="M468 347H1162V667H468Z" fill="url(#bricks)"/>
+    <path d="M425 347H1205L1180 367H450Z" fill="#4b5550"/>
+    <path d="M449 378H1180M454 555H1170" stroke="#0e171b" stroke-width="15"/>
+    <path d="M590 222V110H655V191" fill="#202e30" stroke="#44504b" stroke-width="5"/>
+    <path d="M581 110H662V91H581Z" fill="#131e22"/>
+    <path d="M725 325V216L810 171L895 216V325Z" fill="#293635" stroke="#4b5853" stroke-width="5"/>
+    <path d="M784 228H837V297H784Z" fill="#071014" stroke="#53605b" stroke-width="6"/>
+    <path d="M810 228V297M784 260H837" stroke="#33403b" stroke-width="4"/>
+    <use href="#window" x="520" y="400"/><use href="#window" x="1005" y="400"/>
+    <ellipse cx="875" cy="462" rx="190" ry="155" fill="url(#light)"/>
+    <use href="#window" x="820" y="400"/>
+    <path d="M826 407H864V452H826ZM876 407H914V452H876Z" fill="#c09a66" opacity=".64"/>
+    <path d="M831 459H864V530H831ZM876 459H911V530H876Z" fill="#9c794b" opacity=".37"/>
+    <path d="M838 402L861 536M902 402L881 536" stroke="#0a1215" stroke-width="13" opacity=".8"/>
+    <path d="M550 577H630V652H550ZM992 577H1085V652H992Z" fill="#070e10" stroke="#46524c" stroke-width="7"/>
+    <path d="M544 597L635 625M544 632L635 610M990 580L1088 637" stroke="#33443f" stroke-width="13"/>
+    <path d="M726 667V585Q726 506 810 506T894 585V667Z" fill="#0b1417" stroke="#57625a" stroke-width="10"/>
+    <path d="M754 666V586Q754 533 810 533T866 586V666Z" fill="#080d10"/>
+    <path d="M807 538V666" stroke="#807451" stroke-width="3"/>
+    <circle cx="823" cy="610" r="4" fill="#a09168"/>
+    <path d="M694 663H924L943 685H675Z" fill="#4f5750"/>
+    <path d="M675 685H943L966 710H651Z" fill="#313e3b"/>
+    <path d="M640 707H977V722H640Z" fill="#1b292a"/>
+    <path d="M452 367Q480 380 470 424T495 517T474 641M1172 362Q1140 400 1152 472T1139 659" fill="none" stroke="#121f20" stroke-width="13"/>
+    <path d="M463 393L503 405M474 465L518 456M1154 410L1117 420M1148 503L1107 489" stroke="#162325" stroke-width="9"/>
+  </g>
+  <path d="M775 725L552 900H1110L870 725Z" fill="#68726a" opacity=".12"/>
+  <path d="M0 717Q370 694 810 706T1600 710" fill="none" stroke="#708177" stroke-width="15" opacity=".19" filter="url(#mist)"/>
+  <g fill="none" stroke="#050b0e" stroke-linecap="round">
+    <path d="M210 807Q211 550 258 223M232 585L108 469L84 324M257 282L336 198L374 79M238 472L369 374L413 273M253 309L177 228L142 124M1394 820Q1370 470 1334 100M1366 487L1470 338L1526 293M1349 327L1257 260L1210 198M1409 627L1533 524L1580 414" stroke-width="25"/>
+    <path d="M108 469L24 416M84 350L142 303M328 207L304 112M374 372L449 354M1470 338L1437 250M1263 267L1255 178M1535 524L1498 465" stroke-width="10"/>
+  </g>
+  <g fill="none" stroke="#081113" stroke-width="9">
+    <path d="M0 789H488M1136 789H1600M0 844H488M1136 844H1600"/>
+    <path d="M40 735V900M120 735V900M200 735V900M280 735V900M360 735V900M440 735V900M1176 735V900M1256 735V900M1336 735V900M1416 735V900M1496 735V900M1576 735V900"/>
+  </g>
+  <g fill="#081113"><path d="M30 742L40 711L50 742M110 742L120 711L130 742M190 742L200 711L210 742M270 742L280 711L290 742M350 742L360 711L370 742M430 742L440 711L450 742M1166 742L1176 711L1186 742M1246 742L1256 711L1266 742M1326 742L1336 711L1346 742M1406 742L1416 711L1426 742M1486 742L1496 711L1506 742M1566 742L1576 711L1586 742"/></g>
+  <path d="M0 900V830L19 887L34 809L48 888L84 835L73 895L102 842L129 900L161 861L180 900L248 824L240 900L310 856L334 900L392 837L411 900L476 861L505 900H1195L1240 848L1244 900L1286 824L1297 900L1370 853L1392 900L1436 807L1448 900L1510 844L1518 900L1570 815L1600 846V900Z" fill="#050a0c"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity=".045"/>
+</svg>

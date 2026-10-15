@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00070d">
+  <title>OBLIVION</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/shared/marca-oblivion.svg">
+  <link rel="stylesheet" href="./css/game.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/immersive.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <script type="module" src="./js/play.js"></script>
+</head>
+<body class="play-page immersive-page">
+  <main class="game-viewport" aria-label="OBLIVION">
+    <h1 class="sr-only" id="scene-title">Carregando…</h1>
+    <p class="sr-only" id="scene-description" aria-live="polite">Preparando cenário.</p>
+    <section class="scene-stage" id="stage" aria-label="Cenário do jogo" aria-describedby="scene-description" aria-busy="true" tabindex="-1">
+      <img class="scene-image" id="scene-image" alt="" draggable="false">
+      <div class="hotspots-layer" id="hotspots"></div>
+      <div class="arrows-layer" id="arrows"></div>
+      <div class="mechanics-layer" id="mechanics"></div>
+      <div class="loading-overlay" id="loading" role="status"><span class="loading-mark" aria-hidden="true"></span><span>Entrando…</span></div>
+    </section>
+    <div class="message" id="message" aria-live="polite" hidden></div>
+    <section class="page-error" id="page-error" aria-labelledby="error-title" role="status" hidden>
+      <p class="eyebrow" id="error-eyebrow">A PORTA AINDA ESTÁ FECHADA</p>
+      <h2 id="error-title">Não foi possível abrir este nível.</h2>
+      <p id="error-copy"></p>
+      <div class="dialog-actions"><a class="button button-primary" href="./index.html">Voltar ao menu</a><a class="button button-secondary" href="./dev.html" id="error-dev-link">Abrir ambiente de testes</a></div>
+    </section>
+    <p class="notice notice-warning" id="storage-warning" role="status" hidden></p>
+  </main>
+  <dialog class="game-modal" id="modal" aria-label="Objeto examinado"></dialog>
+  <dialog class="pause-menu" id="pause-menu" aria-labelledby="pause-title">
+    <h2 id="pause-title">OBLIVION</h2>
+    <p class="pause-caption">Pausa</p>
+    <div class="pause-actions">
+      <button class="button button-primary" id="resume-game">Continuar explorando</button>
+      <button class="button button-secondary" id="fullscreen-toggle">Entrar em tela cheia</button>
+      <button class="button button-secondary" id="restart-level" disabled>Reiniciar nível</button>
+      <a class="button button-secondary" href="./index.html">Voltar ao menu</a>
+    </div>
+    <p class="pause-help">Esc: pausa · F: tela cheia<br>F11 mantém a tela cheia ao mudar de página.</p>
+    <p class="pause-status" id="fullscreen-status" role="status" hidden></p>
+  </dialog>
+</body>
+</html>

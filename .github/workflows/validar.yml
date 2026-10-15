@@ -1,0 +1,36 @@
+name: Validar projeto
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    name: Níveis, motor e pastas autorizadas
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter arquivos
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Conferir pastas do Pull Request
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: node scripts/validar-alteracoes.mjs "$BASE_SHA" "$HEAD_SHA" "$HEAD_BRANCH"
+      - name: Validar níveis e arquivos de imagem
+        run: npm run validar
+      - name: Testar motor
+        run: npm test

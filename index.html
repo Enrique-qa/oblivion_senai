@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#020713">
+  <title>OBLIVION</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/shared/marca-oblivion.svg">
+  <link rel="stylesheet" href="./css/game.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <script type="module" src="./js/menu.js"></script>
+</head>
+<body class="menu-page immersive-menu">
+  <div class="menu-backdrop" aria-hidden="true">
+    <img src="./assets/shared/tutorial/vestibulo.png" alt="" fetchpriority="high">
+  </div>
+  <main class="menu-screen">
+    <section class="menu-content" aria-labelledby="menu-title">
+      <img class="menu-emblem" src="./assets/shared/marca-oblivion.svg" alt="" width="80" height="80">
+      <h1 class="menu-wordmark" id="menu-title">OBLIVION</h1>
+      <p class="menu-premise">Você não se lembra de como chegou aqui.</p>
+      <div class="menu-choices" aria-label="Opções do jogo">
+        <button class="menu-choice" id="new-game" type="button">Novo jogo</button>
+        <button class="menu-choice" id="continue-game" type="button" disabled>Continuar</button>
+      </div>
+      <p class="menu-progress" id="save-note" aria-live="polite">Verificando seu progresso…</p>
+      <p class="notice notice-warning menu-storage-warning" id="storage-warning" role="status" hidden></p>
+    </section>
+  </main>
+  <footer class="menu-utility">
+    <p><kbd>F11</kbd> tela cheia · <kbd>Esc</kbd> pausa</p>
+    <a href="./dev.html">Desenvolvimento</a>
+  </footer>
+  <dialog class="confirm-dialog" id="new-game-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-copy">
+    <div class="modal-content">
+      <h2 class="modal-heading" id="confirm-title">Começar novamente?</h2>
+      <p class="modal-text" id="confirm-copy">O progresso salvo neste navegador será apagado. Você voltará ao início da história.</p>
+      <div class="dialog-actions">
+        <button class="button button-secondary" id="cancel-new-game" type="button">Manter progresso</button>
+        <button class="button button-primary" id="confirm-new-game" type="button">Começar novo jogo</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

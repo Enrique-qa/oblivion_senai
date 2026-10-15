@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101311">
+  <title>OBLIVION — Ambiente de testes</title>
+  <link rel="stylesheet" href="./css/game.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/shared/marca-oblivion.svg">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/dev.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <script type="module" src="./js/dev/panel.js"></script>
+</head>
+<body class="dev-page">
+  <header class="game-header"><a class="brand" href="./index.html" aria-label="OBLIVION, voltar ao menu"><span class="brand-symbol" aria-hidden="true">O</span><span>OBLIVION</span></a><span class="dev-header-label"><span class="status-dot" aria-hidden="true"></span> AMBIENTE DE TESTES</span><a class="quiet-link" href="./index.html">Menu do jogo <span aria-hidden="true">↗</span></a></header>
+  <main class="dev-layout">
+    <aside class="dev-sidebar" aria-labelledby="panel-title"><p class="eyebrow">BANCADA DE CRIAÇÃO</p><h1 id="panel-title">Seu nível,<br>em ação.</h1><p class="dev-intro">Escolha um nível para testar as pistas, os enigmas e a navegação.</p>
+      <div class="dev-field"><label for="studio-select">Estúdio</label><select id="studio-select"><option value="professor">Professor</option><option value="estudio-01">Estúdio 01</option><option value="estudio-02">Estúdio 02</option><option value="estudio-03">Estúdio 03</option><option value="estudio-04">Estúdio 04</option><option value="estudio-05">Estúdio 05</option><option value="exemplos">Exemplo completo</option></select></div>
+      <div class="dev-field"><label for="level-select">Nível</label><select id="level-select"></select></div>
+      <div class="dev-actions"><button class="button button-primary" id="test-level">Testar nível <span aria-hidden="true">→</span></button><button class="button button-secondary" id="test-sequence">Testar sequência do estúdio</button></div>
+      <div class="dev-divider"></div>
+      <button class="text-button dev-utility" id="restart-level" disabled>↺ &nbsp; Reiniciar nível</button><button class="text-button dev-utility" id="clear-dev">× &nbsp; Limpar dados de testes</button>
+      <label class="debug-toggle" for="debug-toggle"><input type="checkbox" id="debug-toggle"><span>Mostrar áreas clicáveis</span></label>
+      <p class="dev-safety-note">Os testes não alteram o progresso da campanha.</p>
+      <p class="notice notice-warning" id="dev-storage-warning" role="status" hidden></p>
+    </aside>
+    <section class="dev-workspace" aria-label="Prévia do nível"><div class="chapter-bar"><div><p class="eyebrow" id="run-mode">TESTE INDIVIDUAL</p><h2 class="scene-title" id="scene-title">Escolha um nível</h2></div><span class="draft-badge" id="draft-badge" hidden>RASCUNHO</span></div>
+      <section class="scene-stage" id="stage" aria-label="Cenário em teste" aria-busy="true"><img class="scene-image" id="scene-image" alt=""><div class="hotspots-layer" id="hotspots"></div><div class="arrows-layer" id="arrows"></div><div class="mechanics-layer" id="mechanics"></div><div class="loading-overlay" id="loading"><span class="loading-mark" aria-hidden="true"></span><span>Preparando o teste…</span></div></section>
+      <div class="scene-caption"><p id="scene-description" aria-live="polite">Nenhum cenário carregado.</p></div><div class="message" id="message" aria-live="polite" hidden></div>
+      <section class="dev-result" id="test-result" role="status" hidden><span class="result-mark" aria-hidden="true">✓</span><div><p class="eyebrow">VERIFICAÇÃO CONCLUÍDA</p><h2 id="result-title">Teste concluído.</h2><p id="result-copy">Você chegou ao final deste nível. Reinicie para testar outro caminho.</p></div><button class="button button-secondary" id="result-restart">Testar novamente</button></section>
+      <section class="dev-error" id="dev-error" role="alert" hidden><p class="eyebrow">ALGO PRECISA DE AJUSTE</p><h2 id="dev-error-title">Não foi possível iniciar o teste.</h2><p id="dev-error-copy"></p></section>
+      <details class="state-inspector" open><summary>Estados do nível <span id="state-scene"></span></summary><pre id="state-values">Nenhum estado disponível.</pre></details>
+    </section>
+  </main>
+  <dialog class="game-modal" id="modal" aria-label="Objeto examinado"></dialog>
+</body>
+</html>

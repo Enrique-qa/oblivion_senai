@@ -1,0 +1,29 @@
+/* Preparada para a fonte instalada localmente. Não baixa fontes externas. */
+@font-face { font-family: "Oblivion Display"; src: local("Divergent"); font-display: swap; }
+:root {
+  --bg: #010509; --surface: #031320; --ink: #edf5fa; --muted: #8eabbd;
+  --line: #12354e; --accent: #0d83e9; --accent-ink: #fff; --warning: #d4b499;
+  --font-display: "Oblivion Display", Georgia, "Times New Roman", serif;
+}
+.sr-only { position: absolute !important; width: 1px !important; height: 1px !important; margin: -1px !important; padding: 0 !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; clip-path: inset(50%) !important; white-space: nowrap !important; border: 0 !important; }
+.button-primary { background: #07588f; border-color: #1973ab; color: #fff; }
+.button-primary:hover { background: #0873b7; border-color: #51a6d5; }
+.button-secondary { background: #03121edf; border-color: #1a4059; }
+.button-secondary:hover { background: #09283d; border-color: #477c9d; }
+.answer-submit { color: #fff; background: #07588f; border-color: #1973ab; }
+.answer-submit:hover { background: #0873b7; }
+dialog { background: #020c14; border-color: #16344a; }
+dialog::backdrop { background: #000a; backdrop-filter: blur(5px); }
+.modal-heading { font-family: var(--font-display); }
+.modal-text, .modal-close { color: #c3d1dc; }
+.answer-label { color: #a6bece; }
+.answer-input { border-color: #264d68; background: #01070c; }
+.scene-stage { aspect-ratio: var(--scene-aspect, 16 / 9); }
+.nav-integrada, .nav-integrada:hover { font-size: 0; color: transparent; background: transparent; border-color: transparent; box-shadow: none; }
+.debug-hitboxes .nav-integrada { outline: 1px dashed #0d83e9; outline-offset: -1px; background: #0d83e914; }
+/* A imagem da nota é o próprio objeto examinado. Texto equivalente segue acessível. */
+dialog[data-apresentacao="nota"] { width: min(1000px, 91vw); max-height: 94dvh; border: 0; background: transparent; box-shadow: none; overflow: visible; }
+dialog[data-apresentacao="nota"] .modal-content { padding: 24px 20px; }
+dialog[data-apresentacao="nota"] .modal-heading, dialog[data-apresentacao="nota"] .modal-text { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+dialog[data-apresentacao="nota"] .modal-image { display: block; width: 100%; height: auto; max-height: calc(94dvh - 48px); object-fit: contain; margin: 0; border: 0; }
+dialog[data-apresentacao="nota"] .modal-close { top: -7px; right: 0; z-index: 2; color: #fff; font-size: 28px; text-shadow: 0 1px 8px #000; }

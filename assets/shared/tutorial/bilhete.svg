@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="500" viewBox="0 0 720 500" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">O primeiro bilhete</title>
+  <desc id="descricao">A porta se lembra de três números: 314.</desc>
+  <defs>
+    <linearGradient id="papel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#255572"/>
+      <stop offset=".5" stop-color="#1d4561"/>
+      <stop offset="1" stop-color="#183a54"/>
+    </linearGradient>
+    <linearGradient id="dobra" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#0b263b" stop-opacity="0"/>
+      <stop offset=".48" stop-color="#0b263b" stop-opacity=".16"/>
+      <stop offset=".51" stop-color="#adcadd" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#adcadd" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M46 27L121 31L198 24L287 30L367 25L458 31L547 24L670 31L665 107L675 182L668 262L674 351L666 466L572 461L486 472L393 465L307 472L215 463L125 470L49 463L54 380L46 301L53 213L47 131Z" fill="#061b2d" opacity=".35" transform="translate(6 7)"/>
+  <path d="M46 27L121 31L198 24L287 30L367 25L458 31L547 24L670 31L665 107L675 182L668 262L674 351L666 466L572 461L486 472L393 465L307 472L215 463L125 470L49 463L54 380L46 301L53 213L47 131Z" fill="url(#papel)"/>
+  <path d="M67 51L153 56L240 49M507 447L588 439L646 444" fill="none" stroke="#a0c0d2" stroke-opacity=".14" stroke-width="2"/>
+  <path d="M347 28L363 468" stroke="#071c2c" stroke-opacity=".13" stroke-width="2"/>
+  <path d="M320 28H390L408 466H338Z" fill="url(#dobra)"/>
+  <path d="M75 249Q354 241 648 251" fill="none" stroke="#adcadd" stroke-opacity=".06" stroke-width="2"/>
+  <g fill="#d3e9f3" text-anchor="middle" font-family="'Courier New', monospace">
+    <text x="360" y="132" font-size="26" letter-spacing="1">A PORTA SE LEMBRA</text>
+    <text x="360" y="174" font-size="26" letter-spacing="1">DE TRÊS NÚMEROS.</text>
+    <text x="360" y="341" font-size="120" font-weight="700" letter-spacing="15">314</text>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "name": "oblivion-senai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Motor didático de point and click em HTML, CSS e JavaScript.",
+  "scripts": {
+    "start": "node scripts/servidor.mjs",
+    "validar": "node scripts/validar-niveis.mjs",
+    "check": "node scripts/validar-niveis.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}

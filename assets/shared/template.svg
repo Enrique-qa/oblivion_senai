@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cenário provisório para os estúdios</title><desc id="desc">Uma sala simples com uma mesa à esquerda e uma porta à direita. Os alunos substituirão este cenário.</desc>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#233733"/><stop offset="1" stop-color="#12241e"/></linearGradient>
+    <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#304034"/><stop offset="1" stop-color="#101f18"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#c7d0ac" stop-opacity=".11"/><stop offset="1" stop-color="#c7d0ac" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vignette"><stop offset=".2" stop-color="#030a07" stop-opacity="0"/><stop offset="1" stop-color="#030a07" stop-opacity=".76"/></radialGradient>
+    <filter id="grain"><feTurbulence baseFrequency=".7" numOctaves="3" seed="13" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wall)"/>
+  <path d="M0 600H1600V900H0Z" fill="url(#floor)"/>
+  <path d="M0 586H1600V606H0Z" fill="#405241"/>
+  <g fill="none" stroke="#78876a" stroke-opacity=".12" stroke-width="4"><path d="M140 100H470V510H140ZM550 100H880V510H550ZM980 100H1410V510H980Z"/></g>
+  <path d="M0 24H1600" stroke="#889071" stroke-opacity=".3" stroke-width="9"/>
+  <ellipse cx="615" cy="355" rx="530" ry="430" fill="url(#light)"/>
+  <g fill="none" stroke="#07180f" stroke-width="4"><path d="M0 790L340 600M340 900L560 600M720 900L760 600M1100 900L970 600M1530 900L1190 600M0 705H1600M0 820H1600"/></g>
+  <path d="M336 481H687L748 545H298Z" fill="#66634b" stroke="#1a2b1c" stroke-width="8"/>
+  <path d="M325 547L323 724H351L367 547M678 547L699 724H724L714 547" fill="#303e29" stroke="#17281a" stroke-width="5"/>
+  <path d="M412 440H576L596 501H423Z" fill="#b8ac86"/>
+  <path d="M439 457H547M444 474H555M447 488H511" stroke="#5f6049" stroke-width="3"/>
+  <path d="M1060 148H1323V608H1060Z" fill="#091c12" stroke="#556348" stroke-width="15"/>
+  <path d="M1082 175H1302V596H1082Z" fill="#2c3e2d"/>
+  <path d="M1098 194H1284V356H1098ZM1098 395H1284V579H1098Z" fill="none" stroke="#667357" stroke-opacity=".38" stroke-width="6"/>
+  <path d="M1254 368V427" stroke="#a19060" stroke-width="8"/><path d="M1235 392H1276" stroke="#b7a375" stroke-width="8" stroke-linecap="round"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/><rect width="1600" height="900" filter="url(#grain)" opacity=".045"/>
+</svg>

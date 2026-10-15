@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="410" viewBox="0 0 700 410" role="img" aria-labelledby="title desc">
+  <title id="title">Um bilhete dobrado</title><desc id="desc">Papel envelhecido com quatro números escritos no centro: 1947.</desc>
+  <defs><linearGradient id="paper" x2=".5" y2="1"><stop stop-color="#d3c399"/><stop offset="1" stop-color="#ac9d77"/></linearGradient><filter id="grain"><feTurbulence baseFrequency=".38" numOctaves="3" seed="9" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter></defs>
+  <rect width="700" height="410" fill="#17251f"/>
+  <path d="M84 32L594 44L622 353L111 375Z" fill="#07120d" opacity=".55"/>
+  <path d="M77 23L588 37L608 344L98 367Z" fill="url(#paper)"/>
+  <path d="M88 214L598 193" stroke="#73684a" stroke-opacity=".3" stroke-width="3"/>
+  <path d="M340 31L355 354" stroke="#f3e2b5" stroke-opacity=".28" stroke-width="3"/>
+  <path d="M149 93L506 104M155 115L421 121M166 285L499 274M168 307L470 297" stroke="#665f4c" stroke-width="3" stroke-opacity=".5"/>
+  <text x="351" y="243" text-anchor="middle" fill="#383e30" font-family="Georgia, 'Times New Roman', serif" font-size="88" letter-spacing="18" transform="rotate(-3 351 223)">1947</text>
+  <path d="M575 39L578 76L591 84M98 330L138 343L137 366" fill="none" stroke="#87754e" stroke-width="2"/>
+  <rect width="700" height="410" filter="url(#grain)" opacity=".05"/>
+</svg>

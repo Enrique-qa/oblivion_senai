@@ -1,0 +1,43 @@
+.dev-page { min-width: 740px; }
+.dev-header-label { font-size: 9px; letter-spacing: .16em; color: #adba96; display: flex; align-items: center; gap: 10px; }
+.dev-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 38px; max-width: 1680px; margin: 0 auto; padding: 33px 4.5% 50px; }
+.dev-sidebar { padding-right: 29px; border-right: 1px solid #303b29; }
+.dev-sidebar > .eyebrow { font-size: 9px; margin-bottom: 18px; }
+.dev-sidebar h1 { font-family: Georgia, serif; font-size: 32px; font-weight: 400; line-height: 1.2; margin-bottom: 15px; }
+.dev-intro { color: var(--muted); font-size: 12px; line-height: 1.8; margin-bottom: 26px; }
+.dev-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.dev-field label { font-size: 11px; color: #b8c4a7; }
+.dev-field select { color: var(--ink); background: #171f14; border: 1px solid #48533c; padding: 11px 9px; border-radius: 2px; width: 100%; font-size: 12px; }
+.dev-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 23px; }
+.dev-actions .button { width: 100%; font-size: 12px; padding-left: 10px; padding-right: 10px; }
+.dev-actions .button-primary { justify-content: space-between; padding-left: 17px; padding-right: 17px; }
+.dev-divider { height: 1px; background: #34402c; margin: 27px 0 16px; }
+.dev-utility { display: block; text-align: left; font-size: 12px; margin-bottom: 10px; min-height: 31px; }
+.debug-toggle { display: flex; align-items: center; gap: 9px; cursor: pointer; font-size: 12px; margin-top: 19px; color: #c1ccaf; }
+.debug-toggle input { accent-color: var(--accent); width: 15px; height: 15px; margin: 0; }
+.dev-safety-note { font-size: 10px; line-height: 1.8; color: #87947a; margin: 22px 0 0; }
+.dev-workspace { min-width: 0; }
+.dev-workspace .chapter-bar { min-height: 61px; margin-bottom: 15px; }
+.dev-workspace .scene-title { font-size: 25px; }
+.dev-workspace .scene-stage { box-shadow: 0 10px 30px #0004; }
+.draft-badge { border: 1px solid #766447; color: #d5ba8d; background: #34291b; border-radius: 2px; font-size: 8px; letter-spacing: .14em; padding: 7px 10px; }
+.dev-workspace .scene-caption { padding: 13px 0; }
+.dev-workspace .scene-caption p { font-size: 11px; }
+.dev-result { display: flex; align-items: center; gap: 20px; padding: 21px; border: 1px solid #687b49; background: #26321b; margin-top: 17px; }
+.result-mark { font-size: 28px; color: var(--accent); }
+.dev-result .eyebrow { font-size: 8px; margin-bottom: 7px; }
+.dev-result h2 { font-family: Georgia, serif; font-size: 24px; font-weight: 400; margin: 0 0 7px; }
+.dev-result p:last-child { margin: 0; font-size: 11px; color: #b7c9a0; line-height: 1.7; }
+.dev-result .button { margin-left: auto; white-space: nowrap; font-size: 11px; }
+.dev-error { padding: 22px; border: 1px solid #775d43; background: #30261c; margin-top: 17px; }
+.dev-error .eyebrow { color: #dab990; font-size: 8px; margin-bottom: 10px; }
+.dev-error h2 { font-family: Georgia, serif; font-size: 23px; font-weight: 400; margin-bottom: 12px; }
+.dev-error p:last-child { font-size: 12px; color: #d2c0a6; line-height: 1.75; margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
+.state-inspector { margin-top: 20px; border: 1px solid #303d28; border-radius: 2px; background: #131a10; }
+.state-inspector summary { cursor: pointer; padding: 13px 16px; font-size: 11px; color: #b5c59e; }
+.state-inspector summary span { color: #738568; font-family: Consolas, monospace; font-size: 10px; margin-left: 12px; }
+.state-inspector pre { max-height: 220px; overflow: auto; margin: 0; padding: 4px 16px 16px; font-family: Consolas, "Courier New", monospace; font-size: 11px; line-height: 1.75; color: #9aaf85; white-space: pre-wrap; overflow-wrap: anywhere; }
+.debug-hitboxes .hotspot, .scene-stage.debug .hotspot, .scene-stage[data-debug="true"] .hotspot { background: #cddb5a1b; outline: 1px dashed #cddb5a; outline-offset: -1px; color: #e3ebbc; }
+.debug-hitboxes .hotspot::after, .scene-stage.debug .hotspot::after, .scene-stage[data-debug="true"] .hotspot::after { content: attr(aria-label); position: absolute; top: 0; left: 0; max-width: 100%; padding: 3px 5px; font-size: 9px; line-height: 1.4; background: #16210fe0; color: #e3ebbc; text-align: left; }
+@media (min-width: 1700px) { .dev-layout { grid-template-columns: 310px minmax(0, 1fr); gap: 45px; } }
+@media (max-width: 1180px) { .dev-layout { grid-template-columns: 235px minmax(0, 1fr); padding-left: 3%; padding-right: 3%; gap: 23px; } .dev-sidebar { padding-right: 20px; } .dev-sidebar h1 { font-size: 29px; } .dev-result { flex-wrap: wrap; gap: 15px; } .dev-result .button { margin-left: 0; } }

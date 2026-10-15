@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Do lado de fora</title><desc id="desc">Uma estrada vazia entre árvores ao amanhecer. A casa ficou distante na névoa.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#203838"/><stop offset=".65" stop-color="#9a9d83"/><stop offset="1" stop-color="#d5c49a"/></linearGradient>
+    <linearGradient id="land" x2="0" y2="1"><stop stop-color="#263d35"/><stop offset="1" stop-color="#081715"/></linearGradient>
+    <linearGradient id="road" x2="0" y2="1"><stop stop-color="#9a9b7d" stop-opacity=".3"/><stop offset="1" stop-color="#718275" stop-opacity=".22"/></linearGradient>
+    <radialGradient id="sun"><stop stop-color="#f1d7a1" stop-opacity=".6"/><stop offset="1" stop-color="#eacb8b" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vignette"><stop offset=".4" stop-color="#03110e" stop-opacity="0"/><stop offset="1" stop-color="#03110e" stop-opacity=".72"/></radialGradient>
+    <filter id="fog"><feGaussianBlur stdDeviation="23"/></filter>
+    <filter id="grain"><feTurbulence baseFrequency=".69" numOctaves="3" seed="31" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <ellipse cx="1040" cy="398" rx="490" ry="300" fill="url(#sun)"/>
+  <circle cx="1040" cy="415" r="62" fill="#dec49a" opacity=".5"/>
+  <path d="M0 576L120 483L232 558L352 426L459 530L560 429L664 567L777 504L880 574L1044 473L1171 544L1309 427L1432 534L1540 433L1600 521V900H0Z" fill="#38524a" opacity=".57"/>
+  <path d="M0 689Q247 559 505 655T1041 632T1600 630V900H0Z" fill="url(#land)"/>
+  <g opacity=".58"><path d="M413 561L559 480L707 561Z" fill="#223c35"/><path d="M436 561H683V647H436Z" fill="#2a443b"/><path d="M536 586H577V648H536Z" fill="#18342c"/><path d="M469 574H491V604H469ZM623 574H645V604H623Z" fill="#1a352e"/><path d="M488 520V479H509V508" fill="#294239"/></g>
+  <path d="M748 653Q849 739 560 900H1158Q904 738 813 653Z" fill="url(#road)"/>
+  <path d="M0 637Q412 657 752 635T1600 629" fill="none" stroke="#bfd2b3" stroke-width="35" opacity=".31" filter="url(#fog)"/>
+  <path d="M0 710Q562 660 936 692T1600 706" fill="none" stroke="#bac7a8" stroke-width="26" opacity=".22" filter="url(#fog)"/>
+  <g fill="none" stroke="#132a23" stroke-linecap="round"><path d="M143 900Q183 514 186 63M171 566L65 405L0 357M185 274L284 167L308 79M176 429L286 364L340 273M186 193L111 106L64 10M1439 900Q1390 495 1423 0M1400 515L1510 386L1600 365M1412 267L1311 162L1282 64M1401 369L1275 318L1208 219" stroke-width="38"/><path d="M63 405L77 287M273 181L269 89M280 368L331 382M112 106L158 63M1511 385L1499 277M1312 165L1331 85M1275 318L1251 364" stroke-width="13"/></g>
+  <g fill="none" stroke="#1f3a30" stroke-width="11" opacity=".75"><path d="M377 719L405 320M399 486L343 423M404 376L455 290M1123 717L1148 354M1139 454L1220 379M1147 391L1110 306"/></g>
+  <path d="M0 900V791L35 859L70 773L90 900L137 826L172 900L218 805L240 900L335 824L351 900L453 842L464 900H1286L1303 816L1330 900L1370 841L1420 900L1490 806L1518 900L1572 791L1600 860V900Z" fill="#0b211b"/>
+  <rect width="1600" height="900" fill="url(#vignette)"/><rect width="1600" height="900" filter="url(#grain)" opacity=".05"/>
+</svg>

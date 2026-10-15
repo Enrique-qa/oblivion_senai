@@ -1,0 +1,40 @@
+html, body.play-page { width: 100%; height: 100%; min-width: 0; min-height: 0; overflow: hidden; background: #000; }
+.game-viewport { position: fixed; inset: 0; display: grid; place-items: center; background: #000; }
+.play-page .scene-stage { width: min(100vw, calc(100dvh * var(--scene-aspect, 1.777778))); height: min(100dvh, calc(100vw / var(--scene-aspect, 1.777778))); flex: none; aspect-ratio: auto; border: 0; box-shadow: none; background: #000; }
+.play-page .scene-image { object-fit: fill; }
+.play-page.has-error .scene-stage { display: block; }
+.play-page .hotspot:hover { outline: 0; box-shadow: none; }
+.play-page .nav-arrow { width: clamp(32px, 4vw, 64px); height: clamp(32px, 4vw, 64px); padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; font-size: 0; color: transparent; opacity: .84; }
+.play-page .nav-arrow::before { content: ""; width: 80%; height: 80%; background: #067ce7; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.play-page .nav-arrow:hover { opacity: 1; filter: drop-shadow(0 0 9px #067ce750); }
+.play-page .nav-esquerda::before { transform: rotate(-90deg); }
+.play-page .nav-direita::before { transform: rotate(90deg); }
+.play-page .nav-baixo::before { transform: rotate(180deg); }
+.play-page .nav-arrow.is-locked { opacity: .45; }
+.play-page .nav-integrada { opacity: 1; }
+.play-page .nav-integrada::before { display: none; }
+.play-page .nav-integrada:hover { filter: none; }
+.play-page .loading-overlay { background: #000; color: #8daabd; }
+.play-page .loading-mark { border-color: #124e78; }
+.play-page .loading-mark::after { background: #067ce7; }
+.play-page .message { position: fixed; z-index: 8; left: 50%; bottom: max(4vh, 18px); transform: translateX(-50%); width: max-content; max-width: min(82vw, 850px); margin: 0; padding: 15px 20px; border: 0; color: #edf5fa; background: #000c; backdrop-filter: blur(6px); box-shadow: 0 3px 25px #0008; font-family: "Courier New", monospace; font-size: clamp(13px, 1.05vw, 17px); line-height: 1.7; }
+.play-page .message button { border: 0; color: #a2bdcf; font-size: 22px; }
+.play-page .notice { position: fixed; z-index: 9; top: 16px; right: 16px; max-width: min(420px, 90vw); margin: 0; }
+.play-page .page-error { position: fixed; z-index: 12; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; padding: max(30px, 6vh) 8vw; border: 0; background: #01060af2; text-align: center; overflow-y: auto; }
+.play-page .page-error > p { max-width: 640px; color: #a0b4c4; }
+.play-page .page-error h2 { font-family: var(--font-display); font-size: clamp(25px, 3vw, 44px); }
+.play-page .page-error .dialog-actions { justify-content: center; }
+.play-page .modal-content { padding: clamp(24px, 3vw, 40px); }
+.play-page .modal-heading { font-size: clamp(23px, 2.4vw, 32px); }
+.play-page .modal-text { font-family: "Courier New", monospace; font-size: 14px; line-height: 1.8; }
+.play-page dialog.game-modal:not([data-apresentacao="nota"]) { width: min(540px, 90vw); }
+.play-page dialog[data-apresentacao="nota"] .modal-content { padding: 24px 20px; }
+.pause-menu { width: min(440px, 88vw); border: 1px solid #10354e; padding: 38px; max-height: 94dvh; }
+.pause-menu::backdrop { background: #000b; backdrop-filter: blur(8px); }
+.pause-menu h2 { font-family: var(--font-display); font-size: 32px; font-weight: 400; letter-spacing: .03em; text-align: center; margin-bottom: 7px; }
+.pause-menu .pause-caption { text-align: center; color: #7d9caf; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 28px; }
+.pause-actions { display: grid; gap: 10px; }
+.pause-actions button, .pause-actions a { width: 100%; }
+.pause-help { margin: 25px 0 0; color: #8198a8; font-size: 11px; line-height: 1.8; text-align: center; }
+.pause-status { color: #d7bca3; font-size: 12px; line-height: 1.7; text-align: center; margin: 18px 0 0; }
+@media (prefers-reduced-motion: no-preference) { .play-page .scene-image { animation: reveal-scene .35s ease-out; } @keyframes reveal-scene { from { opacity: .4; } to { opacity: 1; } } }

@@ -1,0 +1,92 @@
+/* Controle nativo: a área de clique é maior que o traço visível. */
+.scene-stage .nav-arrow {
+  width: clamp(56px, 5.8vw, 80px);
+  height: clamp(62px, 8vh, 88px);
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: none;
+  color: #b9dff2;
+  font-size: 0;
+  opacity: .86;
+  filter: none;
+  transition: opacity .18s ease, background .18s ease;
+}
+
+/* Anula o triângulo dos temas anteriores, sem sobrepor dois símbolos. */
+.scene-stage .nav-arrow::before { content: none; display: none; }
+
+.scene-stage .nav-icon {
+  display: block;
+  width: clamp(30px, 3vw, 42px);
+  height: clamp(30px, 3vw, 42px);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 2px #000) drop-shadow(0 0 5px #000c);
+  transform: rotate(var(--nav-rotation, 0deg));
+  transition: transform .18s ease;
+}
+
+.scene-stage .nav-esquerda { left: 12px; --nav-rotation: 180deg; --nav-shift-x: -4px; --nav-shift-y: 0px; }
+.scene-stage .nav-direita { right: 12px; --nav-rotation: 0deg; --nav-shift-x: 4px; --nav-shift-y: 0px; }
+.scene-stage .nav-cima { top: 12px; --nav-rotation: -90deg; --nav-shift-x: 0px; --nav-shift-y: -4px; }
+.scene-stage .nav-baixo { bottom: 12px; --nav-rotation: 90deg; --nav-shift-x: 0px; --nav-shift-y: 4px; }
+
+.scene-stage .nav-arrow:hover {
+  background: transparent;
+  color: #e1f2fc;
+  opacity: 1;
+  filter: none;
+  box-shadow: none;
+}
+
+.scene-stage .nav-arrow:hover .nav-icon,
+.scene-stage .nav-arrow:focus-visible .nav-icon {
+  transform: translate(var(--nav-shift-x, 0px), var(--nav-shift-y, 0px)) rotate(var(--nav-rotation, 0deg));
+}
+
+.scene-stage .nav-arrow:focus-visible {
+  outline: 2px solid #c7eaff;
+  outline-offset: -6px;
+  background: #03172880;
+  color: #e1f2fc;
+  opacity: 1;
+}
+
+.scene-stage .nav-arrow.is-locked { opacity: .48; }
+.scene-stage .nav-arrow.is-locked:hover,
+.scene-stage .nav-arrow.is-locked:focus-visible { opacity: .8; }
+
+/* A arte legada já desenha a saída: permanece somente o botão acessível. */
+.scene-stage .nav-arrow.nav-integrada,
+.scene-stage .nav-arrow.nav-integrada:hover {
+  padding: 0;
+  background: transparent;
+  color: transparent;
+  opacity: 1;
+  filter: none;
+  box-shadow: none;
+}
+.scene-stage .nav-integrada .nav-icon { display: none; }
+.scene-stage .nav-arrow.nav-integrada:focus-visible { outline: 2px solid #c7eaff; outline-offset: -3px; }
+
+.scene-stage.debug-hitboxes .nav-arrow {
+  outline: 1px dashed #b8dffe;
+  outline-offset: -1px;
+  background: #83c6ff12;
+}
+.scene-stage.debug-hitboxes .nav-arrow:focus-visible { outline: 2px solid #e1f2fc; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-stage .nav-arrow, .scene-stage .nav-icon { transition: none; }
+  .scene-stage .nav-arrow:hover .nav-icon,
+  .scene-stage .nav-arrow:focus-visible .nav-icon { transform: rotate(var(--nav-rotation, 0deg)); }
+}
