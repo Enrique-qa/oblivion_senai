@@ -6,12 +6,19 @@ OBLIVION é um jogo didático de terror psicológico, feito com HTML, CSS e Java
 
 Quando a tarefa for apresentada como trabalho de um aluno ou estúdio, confirme o número pelo pedido ou contexto. Se o número estiver ausente, peça essa informação antes de modificar arquivos.
 
-Um estúdio pode editar somente:
+Um estúdio pode editar somente as duas pastas da sua linha:
 
-- `js/studios/estudio-NN/`
-- `assets/studios/estudio-NN/`
+| Estúdio lógico | Pasta JavaScript autorizada | Pasta de assets autorizada |
+| --- | --- | --- |
+| `01` — `estudio-01` | `js/studios/pentaverso-05/` | `assets/studios/estudio-01/` |
+| `02` — `estudio-02` | `js/studios/kiss-02/` | `assets/studios/estudio-02/` |
+| `03` — `estudio-03` | `js/studios/maismais-03/` | `assets/studios/estudio-03/` |
+| `04` — `estudio-04` | `js/studios/bilicoproductions-04/` | `assets/studios/estudio-04/` |
+| `05` — `estudio-05` | `js/studios/estudio01-01/` | `assets/studios/estudio-05/` |
 
-Substitua `NN` pelo número com dois dígitos, de `01` a `05`. Não edite motor, campanha, HTML, CSS compartilhado, exemplos, documentos, scripts, testes ou arquivos de outros estúdios. Se uma mudança no motor for necessária, descreva a necessidade para o professor. Não tente contornar a API pública acessando o DOM do motor ou seus módulos internos.
+O número lógico determina os IDs dos níveis, a pasta de assets e a branch `studio-NN`. O nome físico da pasta JavaScript não determina esse número: `pentaverso-05` pertence ao estúdio lógico `01`, e `estudio01-01` pertence ao lógico `05`. Preserve o mapa acima; não renumere IDs nem reordene a campanha com base no nome da pasta.
+
+Não edite motor, campanha, HTML, CSS compartilhado, exemplos, documentos, scripts, testes ou arquivos de outros estúdios. Se uma mudança no motor for necessária, descreva a necessidade para o professor. Não tente contornar a API pública acessando o DOM do motor ou seus módulos internos.
 
 Use o contrato de `docs/02-COMO-CRIAR-UM-NIVEL.md`, a API de `docs/03-FUNCOES-DISPONIVEIS.md` e o contexto da mecânica de `docs/04-MECANICA-EXCLUSIVA.md`. Preserve os IDs dos níveis. Não instale bibliotecas, não adicione etapas de compilação e não altere o registro central para marcar um nível como pronto.
 

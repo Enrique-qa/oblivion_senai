@@ -7,7 +7,7 @@ Leia a mensagem inteira no ambiente de desenvolvimento. Ela normalmente informa 
 | Tela vazia ao abrir com dois cliques | Abra pelo servidor HTTP, usando `npm start` ou Live Server |
 | Arquivo não carrega | Nome, extensão `.js`, pasta e caminhos dos imports |
 | Erro de sintaxe | Vírgulas, aspas, chaves e parênteses; confira o console com `F12` |
-| ID diferente do registro | Preserve o ID original do template do seu estúdio |
+| ID diferente do registro | Preserve o ID original do template; o nome físico da pasta JavaScript não redefine o número lógico |
 | Cena inicial inexistente | `cenaInicial` deve ser uma chave de `cenas` |
 | Seta aponta para cena inexistente | O destino precisa existir no mesmo nível |
 | Modal não existe | O ID em `acao` ou `abrirModal` deve ser uma chave de `modais` |
@@ -28,7 +28,7 @@ Leia a mensagem inteira no ambiente de desenvolvimento. Ela normalmente informa 
 
 ## Caminho de imagem errado
 
-No `js/studios/estudio-03/nivel1.js`, o caminho para sua imagem pode ser:
+No `js/studios/maismais-03/nivel1.js`, do Estúdio lógico 3, o caminho para sua imagem pode ser:
 
 ```js
 imagem: "../../../assets/studios/estudio-03/sala.webp"

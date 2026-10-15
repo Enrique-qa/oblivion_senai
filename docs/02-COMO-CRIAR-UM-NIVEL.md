@@ -1,16 +1,16 @@
 # Como criar um nível
 
-Comece abrindo o `nivel1.js` que já existe na pasta do seu estúdio. Compare com `examples/nivel-exemplo.js`. Não substitua o ID pelo de outro estúdio nem crie um HTML novo.
+Comece abrindo o `nivel1.js` que já existe na pasta do seu estúdio. Consulte o [mapa de pastas e números lógicos](01-COMO-O-PROJETO-FUNCIONA.md) e compare com `examples/nivel-exemplo.js`. Não substitua o ID pelo de outro estúdio nem crie um HTML novo.
 
 ## IDs obrigatórios
 
 | Arquivo do Estúdio 2 | ID dentro do objeto |
 | --- | --- |
-| `js/studios/estudio-02/nivel1.js` | `estudio-02-nivel-01` |
-| `js/studios/estudio-02/nivel2.js` | `estudio-02-nivel-02` |
-| `js/studios/estudio-02/nivel3.js` | `estudio-02-nivel-03` |
+| `js/studios/kiss-02/nivel1.js` | `estudio-02-nivel-01` |
+| `js/studios/kiss-02/nivel2.js` | `estudio-02-nivel-02` |
+| `js/studios/kiss-02/nivel3.js` | `estudio-02-nivel-03` |
 
-Use o mesmo padrão para o seu número de estúdio. Cada arquivo usa `export default` para entregar um objeto ao motor.
+Use o mesmo padrão de ID para o seu número lógico de estúdio, preservando os IDs que já estão nos arquivos. O sufixo da pasta JavaScript não determina esse número. Cada arquivo usa `export default` para entregar um objeto ao motor.
 
 ## Um nível pequeno e completo
 
@@ -90,7 +90,7 @@ Use valores simples no estado: textos, números finitos, `true`, `false` ou `nul
 
 ## Imagens e áreas clicáveis
 
-O caminho de uma imagem começa na **pasta do arquivo do nível**, não no HTML. Saindo de `js/studios/estudio-02/` até a raiz são três `../`:
+O caminho de uma imagem começa na **pasta do arquivo do nível**, não no HTML. Saindo de `js/studios/kiss-02/` até a raiz são três `../`:
 
 ```js
 imagem: "../../../assets/studios/estudio-02/cozinha.webp"

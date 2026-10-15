@@ -19,7 +19,7 @@ O nível `examples/nivel-exemplo.js` permanece uma referência separada: mostra 
 1. Publique a estrutura em seu repositório e prepare as cinco branches conforme [Git e GitHub](06-GIT-E-GITHUB.md).
 2. Configure seu usuário ou equipe real em `.github/CODEOWNERS`.
 3. Proteja a `main` exigindo Pull Request, revisão e o check obrigatório.
-4. Distribua os números dos estúdios e as duas pastas permitidas.
+4. Distribua os números lógicos dos estúdios e as duas pastas permitidas, conforme o [mapa de pastas](01-COMO-O-PROJETO-FUNCIONA.md).
 5. Demonstre `npm start`, `dev.html` e o nível de exemplo antes de pedir o primeiro nível.
 
 As regras de branch e o script de pastas ajudam a detectar enganos. A revisão e as permissões do repositório são a proteção contra alterações deliberadas da estrutura. Uma branch chamada `professor/...` não autentica a pessoa que a criou.
@@ -33,11 +33,13 @@ Confira o conteúdo pelo `dev.html`, a validação e a sequência do estúdio. D
 // o quarto argumento muda de false para true.
 "estudio-01-nivel-01": registrar(
     "Nome do nível", "estudio-01",
-    "../studios/estudio-01/nivel1.js", true, 1
+    "../studios/pentaverso-05/nivel1.js", true, 1
 )
 ```
 
 Os nomes podem ser atualizados no registro para aparecerem nos seletores. Preserve os IDs. `registry.js` encontra os arquivos; não determina a sequência. Para mudar a ordem, edite somente `js/campaign/order.js` e execute `npm run validar`.
+
+O nome físico das pastas JavaScript não muda os números lógicos. `pentaverso-05` corresponde a `estudio-01`, enquanto `estudio01-01` corresponde a `estudio-05`. Mantenha os IDs e a sequência existentes ao atualizar caminhos de arquivos; as pastas de assets e as branches continuam seguindo os números lógicos.
 
 Não marque templates como prontos só para atravessar a campanha. Enquanto um próximo nível não estiver disponível, o jogador recebe uma mensagem, e os estudantes continuam testando independentemente no ambiente de desenvolvimento.
 

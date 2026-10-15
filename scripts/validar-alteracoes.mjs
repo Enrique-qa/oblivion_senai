@@ -4,6 +4,14 @@ import { execFileSync } from "node:child_process";
 // O CI usa SHAs para que nomes de branches não sejam interpretados pelo Git.
 const [base, head, branch] = process.argv.slice(2);
 const shaValido = (valor) => typeof valor === "string" && /^[0-9a-f]{7,64}$/i.test(valor);
+// O número da branch identifica o estúdio lógico; o sufixo da pasta não define sua permissão.
+const pastasJavaScript = Object.freeze({
+    "01": "pentaverso-05",
+    "02": "kiss-02",
+    "03": "maismais-03",
+    "04": "bilicoproductions-04",
+    "05": "estudio01-01"
+});
 
 function falhar(mensagem) {
     console.error(`ERRO: ${mensagem}`);
@@ -20,7 +28,7 @@ if (!shaValido(base) || !shaValido(head) || !branch) {
         falhar(`A branch "${branch}" não segue o padrão. Use studio-01 a studio-05, tarefa/estudio-01/nome-da-tarefa ou professor/nome-da-tarefa para manutenção do professor.`);
     } else {
         const numero = correspondencia[1] ?? correspondencia[2];
-        const permitidas = [`js/studios/estudio-${numero}/`, `assets/studios/estudio-${numero}/`];
+        const permitidas = [`js/studios/${pastasJavaScript[numero]}/`, `assets/studios/estudio-${numero}/`];
         try {
             // --no-renames expõe tanto o caminho removido quanto o adicionado.
             // -z preserva nomes com espaços ou quebras de linha.

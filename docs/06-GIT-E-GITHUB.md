@@ -15,7 +15,7 @@ studio-05
 
 Cada estúdio compartilha uma branch. Combinem quem vai editar cada arquivo antes de começar, façam commits pequenos e atualizem a branch antes de trabalhar. Evitem editar o mesmo arquivo ao mesmo tempo.
 
-O Estúdio 3 só modifica `js/studios/estudio-03/` e `assets/studios/estudio-03/`. Esse limite vale para todos os grupos, com seu número correspondente.
+O Estúdio lógico 3 só modifica `js/studios/maismais-03/` e `assets/studios/estudio-03/`. Para os demais grupos, consulte o [mapa de pastas autorizadas](01-COMO-O-PROJETO-FUNCIONA.md). As branches seguem o número lógico e não o sufixo da pasta JavaScript: `pentaverso-05` trabalha na `studio-01`, e `estudio01-01` na `studio-05`.
 
 ## Preparação do professor
 
@@ -59,11 +59,13 @@ Teste primeiro. Depois, confira e adicione apenas suas pastas:
 ```powershell
 git status
 git diff
-git add js/studios/estudio-01 assets/studios/estudio-01
+git add js/studios/pentaverso-05 assets/studios/estudio-01
 git commit -m "Adiciona pista e enigma ao nível 1"
 git pull --no-rebase origin studio-01
 git push origin studio-01
 ```
+
+O exemplo é do Estúdio lógico 1: sua pasta JavaScript é `pentaverso-05`, seus assets ficam em `estudio-01` e a branch é `studio-01`. Use as pastas e a branch da sua linha no mapa.
 
 Se o `pull` apresentar um conflito, resolva com o colega e o professor antes de fazer o `push`. Nunca use `push --force` na branch compartilhada para descartar alterações.
 

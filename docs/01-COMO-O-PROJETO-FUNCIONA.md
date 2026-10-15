@@ -22,7 +22,7 @@ js/campaign/order.js        Ordem da campanha
 js/campaign/registry.js     Registro e disponibilidade dos níveis
 js/campaign/inicio.js       Nível inicial do professor
 js/campaign/final.js        Nível final do professor
-js/studios/estudio-01/      Código do Estúdio 1
+js/studios/pentaverso-05/   Código do Estúdio lógico 1
 assets/studios/estudio-01/  Imagens e recursos do Estúdio 1
 examples/                   Exemplo e templates de consulta
 assets/shared/              Imagens compartilhadas do professor
@@ -31,7 +31,17 @@ scripts/                    Servidor e validações
 tests/                      Testes das regras do motor
 ```
 
-Os demais estúdios têm as mesmas duas pastas com números de `02` a `05`. O grupo pode **consultar** qualquer arquivo para aprender, mas só pode **modificar** suas duas pastas.
+O grupo pode **consultar** qualquer arquivo para aprender, mas só pode **modificar** as duas pastas da sua linha:
+
+| Estúdio lógico | Pasta JavaScript | Pasta de assets |
+| --- | --- | --- |
+| `01` — `estudio-01` | `js/studios/pentaverso-05/` | `assets/studios/estudio-01/` |
+| `02` — `estudio-02` | `js/studios/kiss-02/` | `assets/studios/estudio-02/` |
+| `03` — `estudio-03` | `js/studios/maismais-03/` | `assets/studios/estudio-03/` |
+| `04` — `estudio-04` | `js/studios/bilicoproductions-04/` | `assets/studios/estudio-04/` |
+| `05` — `estudio-05` | `js/studios/estudio01-01/` | `assets/studios/estudio-05/` |
+
+O número lógico aparece nos IDs dos níveis, nas pastas de assets e nas branches `studio-01` a `studio-05`. O nome da pasta JavaScript é um nome físico e não muda esse número. Por exemplo, `pentaverso-05` usa IDs iniciados por `estudio-01-`, e `estudio01-01` usa IDs iniciados por `estudio-05-`. A ordem dos níveis continua definida pelo professor na campanha.
 
 ## Cenas e níveis são coisas diferentes
 

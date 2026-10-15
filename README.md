@@ -51,9 +51,19 @@ O progresso fica no `localStorage` deste navegador, com a chave `oblivion.campan
 | Área | Responsável |
 | --- | --- |
 | `js/core/`, `js/campaign/`, HTML e CSS compartilhados | Professor |
-| `js/studios/estudio-01/` e `assets/studios/estudio-01/` | Estúdio 1 |
-| Mesmas duas pastas com `02`, `03`, `04` ou `05` | Estúdio correspondente |
 | `examples/`, `docs/`, scripts, testes e configuração do repositório | Professor |
+
+Cada estúdio pode modificar somente as duas pastas da sua linha:
+
+| Estúdio lógico | Pasta JavaScript | Pasta de assets | Branch |
+| --- | --- | --- | --- |
+| `01` — `estudio-01` | `js/studios/pentaverso-05/` | `assets/studios/estudio-01/` | `studio-01` |
+| `02` — `estudio-02` | `js/studios/kiss-02/` | `assets/studios/estudio-02/` | `studio-02` |
+| `03` — `estudio-03` | `js/studios/maismais-03/` | `assets/studios/estudio-03/` | `studio-03` |
+| `04` — `estudio-04` | `js/studios/bilicoproductions-04/` | `assets/studios/estudio-04/` | `studio-04` |
+| `05` — `estudio-05` | `js/studios/estudio01-01/` | `assets/studios/estudio-05/` | `studio-05` |
+
+O nome físico da pasta JavaScript não define o número lógico. Os níveis de `pentaverso-05` mantêm IDs `estudio-01-nivel-01` a `estudio-01-nivel-03`; os de `estudio01-01` mantêm `estudio-05-nivel-01` a `estudio-05-nivel-03`. Assets, branches e ordem da campanha seguem os números lógicos da tabela.
 
 O nível chama `api.concluirNivel()`. Ele não informa qual estúdio vem depois. A ordem dos 17 níveis está somente em `js/campaign/order.js`; `registry.js` informa o arquivo e a disponibilidade de cada nível.
 

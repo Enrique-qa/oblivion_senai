@@ -2,7 +2,7 @@
 
 Você pode usar IA para entender o código, criar pistas, organizar objetos e desenvolver a mecânica do seu estúdio. Continue responsável por compreender as alterações e testar o resultado.
 
-Antes de pedir mudanças, copie o prompt abaixo. Substitua `NN` pelo número do seu estúdio, com dois dígitos. Acrescente ao final uma tarefa concreta, como "criar um enigma de relógio no nível 2".
+Antes de pedir mudanças, copie o prompt abaixo. Substitua `NN` pelo número lógico do seu estúdio, com dois dígitos, e `PASTA_JS` pelo nome físico da pasta JavaScript, conforme o [mapa de pastas](01-COMO-O-PROJETO-FUNCIONA.md). Por exemplo: o lógico `01` usa `PASTA_JS = pentaverso-05`; o lógico `05` usa `PASTA_JS = estudio01-01`. Acrescente ao final uma tarefa concreta, como "criar um enigma de relógio no nível 2".
 
 ## Prompt pronto para copiar
 
@@ -18,8 +18,12 @@ docs/04-MECANICA-EXCLUSIVA.md
 docs/05-COMO-TESTAR.md
 
 Você pode consultar o projeto, mas só pode modificar:
-js/studios/estudio-NN/
+js/studios/PASTA_JS/
 assets/studios/estudio-NN/
+
+NN é meu número lógico. PASTA_JS é o nome físico da minha pasta de código.
+O nome ou sufixo da pasta JavaScript não redefine meus IDs, minha pasta
+de assets nem minha branch studio-NN. Preserve o mapa documentado.
 
 Não modifique js/core/, js/campaign/, outros estúdios, HTML e CSS
 compartilhados, examples/, docs/, scripts/, tests/ ou configurações.
