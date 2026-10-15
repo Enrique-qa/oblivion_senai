@@ -152,6 +152,8 @@ saidas: {
 
 Esse exemplo requer as cenas `sala` e `cozinha` e o estado `abriuPorta`. A primeira saída é livre. A segunda exige uma condição e apresenta a mensagem quando está bloqueada. Ausência de uma direção significa que não há seta ali.
 
+Para colocar uma seta no próprio caminho do cenário, informe `area` na saída. Escolha a direção que aponta para esse caminho: `cima` para avançar até uma porta ao fundo, por exemplo. No tutorial, a seta de ida fica no piso diante da porta e a de retorno aponta para trás, em vez de ocupar a margem da tela.
+
 Quando a imagem já contém uma seta desenhada, configure a saída na área exata da arte:
 
 ```js

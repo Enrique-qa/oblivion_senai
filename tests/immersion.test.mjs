@@ -82,9 +82,11 @@ test("tutorial tem uma única resposta e permite consultar a pista sem bloquear 
     const enigmas = Object.values(inicio.modais).filter(modal => modal.enigma);
     assert.equal(enigmas.length, 1);
     assert.equal(enigmas[0].enigma.resposta, "314");
-    assert.equal(inicio.cenas.vestibulo.saidas.direita.cena, "porta");
-    assert.equal(inicio.cenas.porta.saidas.esquerda.cena, "vestibulo");
-    assert.equal(inicio.cenas.vestibulo.saidas.direita.condicao, undefined);
+    const avancar = Object.values(inicio.cenas.vestibulo.saidas).find(saida => saida.cena === "porta");
+    const voltar = Object.values(inicio.cenas.porta.saidas).find(saida => saida.cena === "vestibulo");
+    assert.ok(avancar);
+    assert.ok(voltar);
+    assert.equal(avancar.condicao, undefined);
     const estado = criarEstado(inicio.estadoInicial);
     let concluiu = 0;
     const api = { definirEstado: estado.definir, concluirNivel() { concluiu++; } };

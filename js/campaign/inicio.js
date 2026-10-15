@@ -10,7 +10,7 @@ export default {
     cenas: {
         vestibulo: {
             imagem: "../../assets/shared/tutorial/vestibulo.png",
-            descricao: "Um vestíbulo silencioso. Há um bilhete sobre a mesa à esquerda e uma passagem para a porta à direita.",
+            descricao: "Um vestíbulo silencioso. Há um bilhete sobre a mesa à esquerda. A seta no piso aponta para a porta ao fundo.",
             objetos: [
                 {
                     id: "bilhete",
@@ -26,12 +26,16 @@ export default {
                 }
             ],
             saidas: {
-                direita: { cena: "porta", rotulo: "Ir até a porta" }
+                cima: {
+                    cena: "porta",
+                    rotulo: "Ir até a porta",
+                    area: { x: 67, y: 73, largura: 8, altura: 13 }
+                }
             }
         },
         porta: {
             imagem: "../../assets/shared/tutorial/porta.png",
-            descricao: "Uma porta de madeira com uma fechadura de três números. A passagem à esquerda leva de volta ao bilhete.",
+            descricao: "Uma porta de madeira com uma fechadura de três números. A seta no piso aponta para o caminho de volta ao bilhete, atrás de você.",
             objetos: [
                 {
                     id: "fechadura",
@@ -43,7 +47,11 @@ export default {
                 }
             ],
             saidas: {
-                esquerda: { cena: "vestibulo", rotulo: "Voltar ao bilhete" }
+                baixo: {
+                    cena: "vestibulo",
+                    rotulo: "Voltar ao bilhete",
+                    area: { x: 47, y: 90, largura: 8, altura: 9 }
+                }
             }
         }
     },
