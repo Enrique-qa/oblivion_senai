@@ -60,6 +60,24 @@ function populateLevels(studio, selected) {
         levelSelect.append(option);
     }
     if (selected && [...levelSelect.options].some(option => option.value === selected)) levelSelect.value = selected;
+    updateSelectionInfo();
+}
+
+function updateSelectionInfo() {
+    const id = levelSelect.value;
+    const entry = registroNiveis[id];
+    const info = document.querySelector("#selection-info");
+    info.replaceChildren();
+    if (!entry) return;
+    const path = decodeURIComponent(new URL(entry.arquivo).pathname);
+    const file = path.includes("/js/") ? "js/" + path.split("/js/")[1] : path.split("/").slice(-2).join("/");
+    const lines = [file, id];
+    if (entry.estudio.startsWith("estudio-")) lines.push("Branch esperada: studio-" + entry.estudio.slice(-2), "Assets: assets/studios/" + entry.estudio + "/");
+    for (const text of lines) {
+        const line = document.createElement("p");
+        line.textContent = text;
+        info.append(line);
+    }
 }
 
 function navigate(level, sequence = null) {
@@ -91,7 +109,7 @@ function showError(error) {
 
 function updateRunMode() {
     document.querySelector("#run-mode").textContent = sequenceStudio
-        ? `SEQUÊNCIA · ${studioSelect.selectedOptions[0].textContent.toUpperCase()} · ${runOrder.indexOf(currentId) + 1} / ${runOrder.length}`
+        ? `SEQUÊNCIA · ${document.querySelector('#studio-select option[value="' + registroNiveis[currentId].estudio + '"]').textContent.toUpperCase()} · ${runOrder.indexOf(currentId) + 1} / ${runOrder.length}`
         : "TESTE INDIVIDUAL";
 }
 
@@ -143,6 +161,7 @@ async function start() {
     saveDevData();
     document.querySelector("#draft-badge").hidden = entry.pronto;
     document.title = `${entry.nome} — Testes OBLIVION`;
+    document.querySelector("#loaded-level").textContent = studioSelect.selectedOptions[0].textContent + " · " + currentId;
     stage.classList.toggle("debug-hitboxes", debugToggle.checked);
     try {
         const { nivel, url } = await carregarNivel(currentId, { permitirRascunho: true });
@@ -172,7 +191,8 @@ async function start() {
 }
 
 studioSelect.addEventListener("change", () => { populateLevels(studioSelect.value); saveDevData(levelSelect.value, studioSelect.value, null); });
-levelSelect.addEventListener("change", () => saveDevData(levelSelect.value, studioSelect.value, null));
+levelSelect.addEventListener("change", () => { updateSelectionInfo(); saveDevData(levelSelect.value, studioSelect.value, null); });
+document.querySelector("#reload-level").addEventListener("click", () => navigate(currentId ?? levelSelect.value, sequenceStudio));
 document.querySelector("#test-level").addEventListener("click", () => navigate(levelSelect.value));
 document.querySelector("#test-sequence").addEventListener("click", () => navigate(levelsOf(studioSelect.value)[0], studioSelect.value));
 restartButton.addEventListener("click", restart);

@@ -41,3 +41,8 @@
 .debug-hitboxes .hotspot::after, .scene-stage.debug .hotspot::after, .scene-stage[data-debug="true"] .hotspot::after { content: attr(aria-label); position: absolute; top: 0; left: 0; max-width: 100%; padding: 3px 5px; font-size: 9px; line-height: 1.4; background: #16210fe0; color: #e3ebbc; text-align: left; }
 @media (min-width: 1700px) { .dev-layout { grid-template-columns: 310px minmax(0, 1fr); gap: 45px; } }
 @media (max-width: 1180px) { .dev-layout { grid-template-columns: 235px minmax(0, 1fr); padding-left: 3%; padding-right: 3%; gap: 23px; } .dev-sidebar { padding-right: 20px; } .dev-sidebar h1 { font-size: 29px; } .dev-result { flex-wrap: wrap; gap: 15px; } .dev-result .button { margin-left: 0; } }
+
+.dev-selection-info { padding: 12px; border: 1px solid #294554; background: #07121b; color: #9bb6c7; font: 11px/1.6 Consolas, monospace; overflow-wrap: anywhere; }
+.dev-selection-info p { margin: 0 0 5px; }
+.dev-selection-info p:last-child { margin-bottom: 0; }
+.dev-loaded { color: #9bb6c7; font-size: 11px; margin: 0 0 8px; overflow-wrap: anywhere; }

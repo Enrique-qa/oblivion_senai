@@ -17,7 +17,7 @@ Live Server do VS Code é uma alternativa. Quem já usa Python pode executar `py
 ## Testar só um nível
 
 1. Abra `http://localhost:8000/dev.html`.
-2. Escolha seu estúdio e o número do nível.
+2. Escolha o grupo pelo nome e o número do nível. Confira o arquivo, o ID, os assets e a branch esperada no painel. A indicação de branch é uma orientação; confira a branch real com `git branch --show-current`.
 3. Clique em **Testar nível**.
 4. Examine as pistas, teste as setas e tente respostas erradas e corretas.
 5. Ao concluir, confira a mensagem de teste concluído.
@@ -32,7 +32,12 @@ Escolha seu estúdio e clique em **Testar sequência do estúdio**. O teste come
 
 Esse teste não depende da ordem dos outros estúdios e não salva o progresso da campanha. Assim, o Estúdio 4 pode terminar seu trabalho enquanto o Estúdio 1 ainda está criando os cenários.
 
+O cabeçalho da prévia identifica o nível em execução. Trocar a seleção prepara o próximo teste; clique em **Testar nível** para carregá-lo.
+
 ## Reiniciar e limpar
+
+Depois de salvar alterações no editor, use **Recarregar código do nível** para reabrir o nível em execução e carregar seus módulos novamente. Durante uma sequência, mantém o nível atual e a sequência. Se outro servidor mantiver arquivos antigos em cache, use também Ctrl+F5.
+
 
 **Reiniciar nível** volta à cena inicial, restaura `estadoInicial` e encerra os eventos e efeitos da mecânica anterior. Use-o para verificar que uma pista não ficou marcada de uma tentativa anterior.
 

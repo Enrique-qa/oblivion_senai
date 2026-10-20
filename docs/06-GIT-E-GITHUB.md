@@ -69,6 +69,32 @@ O exemplo é do Estúdio lógico 1: sua pasta JavaScript é `pentaverso-05`, seu
 
 Se o `pull` apresentar um conflito, resolva com o colega e o professor antes de fazer o `push`. Nunca use `push --force` na branch compartilhada para descartar alterações.
 
+## Receber atualizações da main
+
+Não é preciso atualizar a main antes de fazer commit. Primeiro salve o trabalho na branch do grupo, mesmo que seja um ponto de segurança ainda em desenvolvimento. Confira a branch com `git branch --show-current` e confira os arquivos com `git status`.
+
+Exemplo do Estúdio lógico 01 (Pentaverso), estando na branch studio-01:
+
+```powershell
+git add js/studios/pentaverso-05 assets/studios/estudio-01
+git commit -m "Salva trabalho antes de atualizar a estrutura"
+git fetch origin
+git merge origin/studio-01
+git push origin studio-01
+git branch backup/studio-01-antes-atualizacao
+git merge origin/main
+```
+
+Se não há alterações pendentes, pule add e commit. Use um nome novo para a branch de backup a cada atualização. Se ainda usam as pastas antigas, adicione os caminhos reais que aparecem no git status antes de fazer commit.
+
+Execute por etapas: se houver conflito, pare e resolva com o professor antes de seguir. O merge combina os históricos; os commits anteriores continuam disponíveis. Não aceite todos os arquivos de um lado indiscriminadamente. Para desistir de um merge ainda em andamento, iniciado com a árvore limpa, use `git merge --abort`.
+
+As pastas foram renomeadas na main. Git pode reconhecer renomeações e combinar edições, mas arquivos novos nas pastas antigas ou conflitos de renomeação precisam de conferência. Compare com o backup e confirme que os três níveis e suas mecânicas estão nas pastas atuais, mantendo seus IDs.
+
+Após resolver conflitos, adicione os arquivos resolvidos e finalize com git commit se solicitado. Execute npm run validar e npm test, teste nível individual, sequência e reinício em dev.html e só então envie com `git push origin studio-01`.
+
+Não é necessário trocar para a main local: git merge origin/main recebe suas novidades diretamente na branch do grupo. Evite reset --hard, descarte de alterações e push --force para resolver dificuldades. Salvar commits e enviá-los antes do merge mantém uma cópia recuperável da produção.
+
 ## Pedir a integração
 
 No GitHub, abra um Pull Request com **base: main** e **compare: studio-01**. Escreva o que mudou, como foi testado e se algo precisa de ajuda. O modelo do repositório aparece automaticamente.
