@@ -11,6 +11,7 @@ export function ativarMecanica(game) {
     const contexto = Object.freeze({
         api: game.api,
         camada,
+        get cenaAtual() { return game.currentScene; },
         ouvir(alvo, evento, callback, opcoes) {
             verificar();
             if (!(alvo instanceof Element) || (alvo !== camada && !camada.contains(alvo))) throw new Error("A mecânica pode registrar ouvir() somente em sua camada ou em elementos criados dentro dela.");

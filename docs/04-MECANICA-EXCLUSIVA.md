@@ -46,6 +46,18 @@ No ambiente de testes, escolha **Exemplo completo** e use **Acender vela** para 
 
 ## Recursos do contexto
 
+### `contexto.cenaAtual`
+
+**Serve para:** consultar a chave da cena que está aberta no nível. O valor muda quando o jogador navega para outra cena.
+
+```js
+const marcaDaCena = MARCAS.find(marca => marca.cena === contexto.cenaAtual);
+```
+
+**Resultado esperado:** retorna o ID da cena atual, ou `null` enquanto nenhuma cena estiver carregada. É uma leitura; use `api.irParaCena(id)` para navegar.
+
+**Erro comum:** comparar com o nome que aparece na tela em vez da chave declarada em `cenas`.
+
 ### `contexto.api`
 
 **Serve para:** acessar as oito funções públicas do motor.

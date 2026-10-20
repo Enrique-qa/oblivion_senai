@@ -14,8 +14,6 @@ const MARCAS = [
 const PINCELADAS_PARA_REVELAR = 12; // quantos movimentos sobre a marca até ela ficar nítida
 const RAIO_DO_PINCEL = 28;          // em pixels
 
-// TODO (1 linha): ligar ao id da cena atual. Rode console.log(contexto) dentro de
-// ativarMecanica para ver o que o motor entrega e ajuste a linha abaixo.
 function obterCena(contexto) {
     return contexto.cenaAtual ?? null;
 }
@@ -148,7 +146,7 @@ export default function ativarMecanica(contexto) {
 
     const observador = new ResizeObserver(ajustarCanvas);
     observador.observe(camada);
-    const intervalo = setInterval(atualizarMarcas, 250); // acompanha a troca de cena
+    const pararAtualizacao = contexto.repetir(atualizarMarcas, 250); // acompanha a troca de cena
 
     const pararBotao = ouvir(botao, "click", () => {
         ativa = !ativa;
@@ -174,7 +172,7 @@ export default function ativarMecanica(contexto) {
         pararSubir();
         pararCancelar();
         observador.disconnect();
-        clearInterval(intervalo);
+        pararAtualizacao();
         canvas.remove();
         camadaMarcas.remove();
         botao.remove();

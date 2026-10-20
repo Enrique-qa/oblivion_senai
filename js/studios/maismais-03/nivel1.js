@@ -4,7 +4,7 @@ import ativarMecanica from "./mecanica.js";
 // Fluxo: portão (pistas) → jardim (caixa de correio com cadeado "AJUDA" → chave)
 //        → varanda (porta trancada, exige a chave) → hall (final do nível).
 export default {
-    id: "estudio-04-nivel-01",
+    id: "estudio-03-nivel-01",
     nome: "Nível 1 — A negação",
 
     // CENA INICIAL E ESTADO
@@ -76,7 +76,7 @@ export default {
             saidas: {
                 esquerda: "jardim",
                 direita: "lateral",
-                frente: {
+                cima: {
                     cena: "hall",
                     rotulo: "Entrar na casa",
                     condicao: { chave: "chaveEncontrada", valor: true },
